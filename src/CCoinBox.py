@@ -7,9 +7,9 @@ class CCoinBox:
         self.reset()
 
     def ajouter_25c(self):
-        self.monnaie_courante = self.monnaie_courante + 1
-        # MUTANT : on change "> 1" en ">= 1"
-        if self.monnaie_courante >= 1:
+        #mutant : +1 → +2
+        self.monnaie_courante = self.monnaie_courante + 2
+        if self.monnaie_courante > 1:
             self.vente_permise = True
         print("Une pièce a été ajoutée")
 
